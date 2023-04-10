@@ -17,9 +17,10 @@
                     <th>Action</th>
                     <th>Inserted By</th>
                     <th>Inserted At</th>
+                    <th>Updated At</th>
                     <th>Payload</th>
                     <th>Old Payload</th>
-                    
+                    <th>Status</th>
                 </tr>
             </thead>
             <tbody>
@@ -27,8 +28,10 @@
                     <td th:text="${log.action}">Action</td>
                     <td th:text="${log.insertedBy}">Inserted By</td>
                     <td th:text="${log.insertedAt}">Inserted At/td>
+                    <td th:text="${log.lastModifiedAt}">updatedAt/td>
                     <td th:text="${log.newPayload}">Payload</td>
                     <td th:text="${log.oldPayload}">Old Version</td>
+                    <td th:text="${log.status}">Status</td>
                 </tr>
             </tbody>
         </table>

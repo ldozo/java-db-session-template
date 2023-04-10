@@ -2,14 +2,10 @@ package com.enginaar.sessionauthtemplate.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.enginaar.sessionauthtemplate.entity.City;
-import com.enginaar.sessionauthtemplate.service.CityService;
-import com.enginaar.sessionauthtemplate.service.TransactionLogService;
+import com.enginaar.sessionauthtemplate.service.LogService;
 
 import lombok.AllArgsConstructor;
 
@@ -18,7 +14,7 @@ import lombok.AllArgsConstructor;
 @AllArgsConstructor
 public class LoggingController {
 
-    private TransactionLogService logs;
+    private LogService logs;
 
     @GetMapping
     public ModelAndView list() {

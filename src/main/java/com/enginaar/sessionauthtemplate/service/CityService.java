@@ -7,10 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.Assert;
 
 import com.enginaar.sessionauthtemplate.entity.City;
-import com.enginaar.sessionauthtemplate.entity.TransactionLog;
 import com.enginaar.sessionauthtemplate.repository.CityRepository;
-import com.enginaar.sessionauthtemplate.repository.LogRepository;
-
 import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
 
