@@ -28,7 +28,7 @@ public class SecurityConfig {
             .authorizeHttpRequests(r -> r.requestMatchers("/app/**").authenticated()
                                          .anyRequest().permitAll())
             .formLogin(f -> f.usernameParameter("email")
-                             .defaultSuccessUrl("/users"))
+                             .defaultSuccessUrl("/"))
             .logout(f -> f.permitAll());
         return http.build();
     }

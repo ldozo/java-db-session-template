@@ -8,13 +8,22 @@
     <script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 </head>
 <body>
+    <div th:replace="header"></div>
     <div class="container text-center">
-        <h1>Page list</h1>
+        <h2>Hi!</h2>
+        <p>
+        This is a sample application which uses session based auth and it has simple mvc functionalities.
+        Feel free to copy and change the application as you wish.
+        </p>
+        <p>Here you can register, login, logout</p>
+        <p>As a basic functionality it has city and district crud operations. You can simply go to city list and play around.</p>
+        <h2>Page list</h2>
         <h3><a th:href="@{/app/users}">List of Users</a></h3>
         <h3><a th:href="@{/app/city}">List of Cities</a></h3>
         <h3><a th:href="@{/app/transactions}">Transactions</a></h3>
         <h3><a th:href="@{/register}">Register</a></h3>
         <h3><a th:href="@{/login}">Login</a></h3>
+        <h3><a th:href="@{/logout}">Logout</a></h3>
     </div>
      
 </body>
