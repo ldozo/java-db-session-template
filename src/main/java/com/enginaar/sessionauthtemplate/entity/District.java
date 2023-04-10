@@ -1,20 +1,19 @@
 package com.enginaar.sessionauthtemplate.entity;
 
-import java.util.List;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.Data;
 
 @Entity
-@Table(name = "cities")
+@Table(name = "districts")
 @Data
-public class City {
+public class District {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,6 +22,7 @@ public class City {
     @Column(name = "NAME", length = 50)
     private String name;
 
-    @OneToMany(mappedBy = "city")
-    private List<District> districts;
+    @ManyToOne
+    @JoinColumn(name = "DESTINATION")
+    private City city;
 }

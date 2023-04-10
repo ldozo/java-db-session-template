@@ -29,6 +29,31 @@
                 </div>
             </div>
         </form>
+        <nav class="navbar navbar-light bg-light" th:if="${city.id != null}">
+            <a class="btn btn-outline-success my-2 my-sm-0" th:href="@{/app/city/{city}/district/new(city=${city.id})}">New District</a>
+        </nav>
+        <table class="table table-striped table-bordered">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Update</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="district: ${city.districts}">
+                    <td th:text="${district.id}">District ID/td>
+                    <td th:text="${district.name}">Name</td>
+                    <td>
+                        <a class="btn btn-outline-warning my-2 my-sm-0" th:href="@{/app/city/{cityId}/district/{id}(id=${district.id}, cityId=${city.id})}">Update</a>
+                    </td>
+                    <td>
+                        <a class="btn btn-outline-danger my-2 my-sm-0" th:href="@{/app/city/{cityId}/district/{id}/delete(id=${district.id}, cityId=${city.id})}">Delete</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </body>
 
